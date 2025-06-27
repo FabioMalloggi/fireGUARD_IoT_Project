@@ -1,0 +1,25 @@
+<config cooja="0">
+  <database host="localhost" user="root" password="PASSWORD" name="fireGUARD_DB" port="3306"/>
+  <device id='0' cat="SSD" address="fd00::f6ce:36ed:babb:5620" cooja_address="fd00::202:2:2:2" port="5683">
+    <resource>temp</resource>
+    <resource>hum</resource>
+    <resource>pressure</resource>
+    <resource>tvoc</resource>
+    <resource>raw_h2</resource>
+    <resource>raw_ethanol</resource>
+    <resource>pm1_0</resource>
+    <resource>pm2_5</resource>
+    <resource>nc0_5</resource>
+    <resource>status</resource>
+  </device>
+  <device id='1' cat="SV" address="fd00::f6ce:3616:3304:68e1" cooja_address="fd00::203:3:3:3" port="5683">
+    <resource>vent</resource>
+    <resource>obs_status</resource>
+  </device>
+  
+  <safety_levels>
+    <pm1_0>250</pm1_0>
+    <pm2_5>250</pm2_5>
+    <nc0_5>2500</nc0_5>
+  </safety_levels>
+</config>

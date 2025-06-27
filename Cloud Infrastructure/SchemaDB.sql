@@ -1,0 +1,92 @@
+CREATE DATABASE IF NOT EXISTS fireGUARD_DB;
+USE fireGUARD_DB;
+
+CREATE TABLE IF NOT EXISTS devices (
+    id INT PRIMARY KEY,
+    base_uri VARCHAR(100) NOT NULL,
+    port INT NOT NULL,
+    category VARCHAR(10) NOT NULL,
+    resources TEXT NOT NULL  -- use TEXT to hold JSON strings
+);
+
+CREATE TABLE IF NOT EXISTS temp (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value FLOAT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS hum (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value FLOAT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS pressure (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value FLOAT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tvoc (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS raw_h2 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS raw_ethanol (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS pm1_0 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS pm2_5 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS nc0_5 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS status (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time BIGINT NOT NULL,
+    timestamp TIMESTAMP NOT NULL,
+    device INT NOT NULL,
+    value INT NOT NULL
+);
+
+

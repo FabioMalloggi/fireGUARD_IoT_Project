@@ -1,0 +1,26 @@
+#define MEAN_TEMP 		15.970423f
+#define STD_DEV_TEMP		14.359576f
+
+#define MEAN_HUMIDITY		48.539501f
+#define STD_DEV_HUMIDITY	 8.865367f
+
+#define MEAN_PRESSURE	       938.627625f
+#define STD_DEV_PRESSURE	 1.331344f
+
+#define MEAN_TVOC	      1942.057373f
+#define STD_DEV_TVOC	      7811.588867f
+
+#define MEAN_RAW_H2	     12942.453125f
+#define STD_DEV_RAW_H2	       272.464294f
+
+#define MEAN_RAW_ETHANOL     19754.257812f
+#define STD_DEV_RAW_ETHANOL    609.513123f
+
+#define MEAN_PM1_0	       100.594299f
+#define STD_DEV_PM1_0	       922.524231f
+
+#define MEAN_PM2_5	       184.467773f
+#define STD_DEV_PM2_5	      1976.305664f
+
+#define MEAN_NC0_5	       491.463654f
+#define STD_DEV_NC0_5	      4265.661133f
